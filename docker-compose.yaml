@@ -52,7 +52,7 @@ services:
       - crate
     environment:
       - CRATE_HOST=crate
-  volumes:
+volumes:
   mongo-db: ~
   pgadmin-db: ~
   grafana-storage: ~

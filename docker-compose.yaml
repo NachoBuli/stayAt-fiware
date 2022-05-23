@@ -52,7 +52,6 @@ services:
       - crate
     environment:
       - CRATE_HOST=crate
-
 volumes:
   mongo-db: ~
   pgadmin-db: ~

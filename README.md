@@ -3,7 +3,7 @@
 </h1>
 
 <details>
-  <summary ><strong>📖 Table of Contents</strong></summary>
+  <summary ><strong>📖 Table of Contents </strong></summary>
   <ol>
     <li>
       <a href="#about-the-project">About the project</a>

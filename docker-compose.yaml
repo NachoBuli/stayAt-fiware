@@ -25,7 +25,7 @@ services:
     environment:
       - HOST=0.0.0.0
   grafana:
-    image: grafana/grafana-oss
+    image: grafana/grafana-oss:7.4.3
     ports:
       - ${GRAFANA_PORT:-3000}:3000
     environment:
@@ -34,7 +34,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana #admin - ORT2022!
   crate:
-    image: crate:1.0.5
+    image: crate
     ports:
       # Admin UI
       - "${CREATEDB_PORT:-4200}:4200"

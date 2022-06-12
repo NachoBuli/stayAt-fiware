@@ -25,12 +25,12 @@ services:
     environment:
       - HOST=0.0.0.0
   grafana:
-    image: grafana/grafana-oss:7.4.3
+    image: grafana/grafana-oss
     ports:
       - ${GRAFANA_PORT:-3000}:3000
     environment:
       #crate-datasource,Postgres
-      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-worldmap-panel,grafana-clock-panel,grafana-worldmap-panel
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-worldmap-panel,grafana-clock-panel,grafana-worldmap-panel,simpod-json-datasource, yesoreyeram-infinity-datasource
     volumes:
       - grafana-storage:/var/lib/grafana #admin - ORT2022!
   crate:

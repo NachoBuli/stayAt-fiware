@@ -30,11 +30,11 @@ services:
       - ${GRAFANA_PORT:-3000}:3000
     environment:
       #crate-datasource,Postgres
-      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-worldmap-panel,grafana-clock-panel,grafana-worldmap-panel
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-worldmap-panel,grafana-clock-panel,grafana-worldmap-panel,simpod-json-datasource, yesoreyeram-infinity-datasource
     volumes:
       - grafana-storage:/var/lib/grafana #admin - ORT2022!
   crate:
-    image: crate:1.0.5
+    image: crate
     ports:
       # Admin UI
       - "${CREATEDB_PORT:-4200}:4200"
